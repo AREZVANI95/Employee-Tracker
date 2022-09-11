@@ -1,4 +1,4 @@
-INSERT INTO departments(id, name)
+INSERT INTO department(id, name)
 VALUES
     ("Engineering"),
     ("Support"),
@@ -12,7 +12,7 @@ VALUES
     ("Accountant", 60000, 1),
     ("Salesperson", 80000, 1),
     ("Financial Advisor", 90300, 2),
-    ("Human Resources Manager", 70580, 2), ,
+    ("Human Resources Manager", 70580, 2), 
     ("Market Research Analyst", 55000, 3),
     ("Marketing Manager", 90500, 3),
     ("Lead Engineer", 100000, 4),
@@ -39,9 +39,3 @@ VALUES
     (15, 'Monica', 'Bellucci'),
     (16, 'Samuel', 'Johnson');
 
-UPDATE employee
-SET
-role_id = 1,
-    manager_id = null
-WHERE
-id = 1;
