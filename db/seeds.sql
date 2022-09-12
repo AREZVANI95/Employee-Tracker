@@ -1,15 +1,15 @@
-INSERT INTO department(id, name)
+INSERT INTO department (id, name)
 VALUES
-    ("Engineering"),
-    ("Support"),
-    ("Accounting"),
-    ("Marketing"),
-    ("Human Resources"),
-    ("Sales");
+    (1, "Engineering"),
+    (2, "Support"),
+    (3, "Accounting"),
+    (4, "Marketing"),
+    (5, "Human Resources"),
+    (6, "Sales");
 
-INSERT INTO roles(title, salary, department_id)
+INSERT INTO roles (title, salary, department_id)
 VALUES
-    ("Accountant", 60000, 1),
+    ('Accountant', 60000, 1),
     ("Salesperson", 80000, 1),
     ("Financial Advisor", 90300, 2),
     ("Human Resources Manager", 70580, 2), 
@@ -20,7 +20,7 @@ VALUES
     ("Desktop Support Technician", 50000, 5),
     ("Sales Engineer", 85000, 5);
 
-INSERT INTO employee(id, first_name, last_name)
+INSERT INTO employee (id, first_name, last_name)
 VALUES
     (1, 'James', 'Fraser'),
     (2, 'Jack', 'London'),

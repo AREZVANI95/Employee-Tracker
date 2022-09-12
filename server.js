@@ -1,40 +1,23 @@
 const inquirer = require("inquirer");
-const mysql = require("mysql2");
-const logo = require("asciiart-logo")
-require("console.table");
-
-//Creates the initial logo from the example given.
-init()
-
-function init() {
-    const logoText = logo({
-        name: "Employee Manager Module"
-    }).render();
-    console.log(logoText)
-}
-
-//Connects to the database
-const connection = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "root",
-    database: "employee_table_tracker"
-});
+const connection = require("./db/connection")
 
 // On connectiong to server run function.
 connection.connect(function (err) {
     if (err) throw err;
-    console.log("\nWelcome to the Employee Management System!\n");
+    console.log("Succesfully Connected");
     startApp();
+    
 });
 
 //Starts the app, Question prompt for the user.
 function startApp() {
     inquirer.prompt([{
+            name: "start",
             type: 'list',
             message: 'Choose one of the following:',
-            choices: ['View all departments',
-                'View all roles',
+            choices: [
+                'View All Departments',
+                'View All Roles',
                 'View all employees',
                 'Add a department',
                 'Add a role',
@@ -46,7 +29,7 @@ function startApp() {
             ]
         }, ])
         .then(function (answer) {
-            switch (answer.action) {
+            switch (answer.start) {
                 case "View All Employees":
                     viewAllEmployees();
                     break;
@@ -79,5 +62,19 @@ function startApp() {
                     connection.end();
                     break;
             }
-        });
+        })
+}
+
+//View all departments
+function viewAllDepartments() {
+    var query = "SELECT * FROM department;"
+    connection.query(query, function (err, results) {
+            if (err) {
+                log(("Error in retrieving your data."));
+            } else {
+                console.table(results);
+            }
+            startApp();
+        }
+    )
 }
