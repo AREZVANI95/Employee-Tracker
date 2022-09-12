@@ -107,66 +107,54 @@ function addDepartment() {
     // var Dept = results.map(dept => ({name: dept.name, value: dept.id}));
     inquirer
         .prompt([{
-                type: "input",
-                name: "first_name",
-                message: "What is their first name?"
-            },
-            {
-                type: "input",
-                name: "last_name",
-                message: "What is their last name?"
-            },
-            {
-                name: "role",
-                type: "list",
-                message: "What is their role?",
-                choices: Dept
-            }
-        ])
-    }
+            type: "input",
+            name: "new_department",
+            message: "Name of Department you wish to add?"
+        }])
+}
 
-//Add Department 
+//Add Role 
 function addRoles() {
     // var Roles = results.map(roles => ({name: roles.name, value: roles.id}));
     inquirer
         .prompt([{
-                type: "input",
-                name: "first_name",
-                message: "What is their first name?"
-            },
-            {
-                type: "input",
-                name: "last_name",
-                message: "What is their last name?"
-            },
-            {
-                name: "role",
-                type: "list",
-                message: "What is their role?",
-                choices: Roles
-            }
+            type: "input",
+            name: "new_role",
+            message: "Role to add?"
+          },
+          {
+            type: "input",
+            name: "new_salary",
+            message: "Salary of role?"
+          },
+          {
+            name: "department",
+            type: "list",
+            message: "Department role belongs to?",
+            choices: Dept
+          }
         ])
-    }
+}
 
-//Add Department 
+//Add Employee 
 function addEmployee() {
     // var Empl = results.map(empl => ({name: empl.name, value: empl.id}));
     inquirer
         .prompt([{
-                type: "input",
-                name: "first_name",
-                message: "What is their first name?"
-            },
-            {
-                type: "input",
-                name: "last_name",
-                message: "What is their last name?"
-            },
-            {
-                name: "role",
-                type: "list",
-                message: "What is their role?",
-                choices: Empl
-            }
+            type: "input",
+            name: "first_name",
+            message: "First Name?"
+        },
+        {
+            type: "input",
+            name: "last_name",
+            message: "Last Name?"
+        },
+        {
+            name: "role",
+            type: "list",
+            message: "Employee Role?",
+            choices: Roles
+        }
         ])
-    }
+}
