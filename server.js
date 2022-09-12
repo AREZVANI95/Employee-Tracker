@@ -114,7 +114,7 @@ function addDepartment() {
 }
 
 //Add Role 
-function addRoles() {
+function addRole() {
     // var Roles = results.map(roles => ({name: roles.name, value: roles.id}));
     inquirer
         .prompt([{
@@ -131,7 +131,7 @@ function addRoles() {
             name: "department",
             type: "list",
             message: "Department role belongs to?",
-            choices: Dept
+            // choices: Dept
           }
         ])
 }
@@ -154,7 +154,7 @@ function addEmployee() {
             name: "role",
             type: "list",
             message: "Employee Role?",
-            choices: Roles
+            // choices: Roles
         }
         ])
 }

@@ -13,13 +13,16 @@
 Application will be able to manage departments, roles and employees of a company.
 
 ## Static IMG:
-![Displaying-Code](Develop/img/Idle%20Code%20Github.gif)
+![Displaying-Code](/img/Static-IMG.PNG)
 
 ## IMG in Action:
-![Code-Presentation](Develop/img/Code%20in%20action.gif)
+![Code-Presentation](/img/IMG-In-Action.PNG)
 
 ## Installation:
 - Download the ZIP file or clone the repository
+
+## How To Video:
+- https://watch.screencastify.com/v/iT7xlBNRnjvIhd1vad3I
 
 ## Usage:
 - Open in the Terminal or in Bash
