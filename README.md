@@ -11,6 +11,8 @@
 
 ## Description:
 Application will be able to manage departments, roles and employees of a company.
+This application is a work-in-progress.
+Besides showing the tables that are saved already and asking the user some questions when it comes to attempting to add any category into the database. I cant really save any of those inputs yet. 
 
 ## Static IMG:
 ![Displaying-Code](/img/Static-IMG.PNG)
